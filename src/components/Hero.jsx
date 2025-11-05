@@ -7,11 +7,11 @@ const NeonButton = ({ href, children, onClick, download }) => (
     href={href}
     onClick={onClick}
     download={download}
-    className="relative inline-flex items-center gap-2 rounded-full px-6 py-3 text-sm font-semibold tracking-wide text-cyan-200 hover:text-white transition-colors duration-300"
-    style={{ textShadow: '0 0 8px rgba(34,211,238,0.7)' }}
+    className="relative inline-flex items-center gap-2 rounded-full px-6 py-3 text-sm font-semibold tracking-wide text-red-200 hover:text-white transition-colors duration-300"
+    style={{ textShadow: '0 0 8px rgba(239,68,68,0.7)' }}
   >
-    <span className="absolute inset-0 rounded-full bg-cyan-500/20 blur-md" aria-hidden />
-    <span className="absolute inset-0 rounded-full ring-2 ring-cyan-400/60 shadow-[0_0_30px_rgba(34,211,238,0.35)]" aria-hidden />
+    <span className="absolute inset-0 rounded-full bg-red-500/20 blur-md" aria-hidden />
+    <span className="absolute inset-0 rounded-full ring-2 ring-red-400/60 shadow-[0_0_30px_rgba(239,68,68,0.35)]" aria-hidden />
     <span className="relative flex items-center gap-2">{children}</span>
   </a>
 );
@@ -24,29 +24,29 @@ export default function Hero() {
   };
 
   return (
-    <section id="home" className="relative min-h-[90vh] w-full overflow-hidden bg-[#07090f] text-white">
+    <section id="home" className="relative min-h-[90vh] w-full overflow-hidden bg-[#0a0a0a] text-white">
       {/* 3D Spline Background */}
       <div className="absolute inset-0">
         <Spline
-          scene="https://prod.spline.design/FduaNp3csZktbOi3/scene.splinecode"
+          scene="https://prod.spline.design/KjKmX-97fe4kJxxg/scene.splinecode"
           style={{ width: '100%', height: '100%' }}
         />
-        {/* Soft gradient vignetting that won't block interactions */}
-        <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_at_top,rgba(56,189,248,0.18),rgba(2,6,23,0.9))]" />
+        {/* Red/White soft gradient vignetting that won't block interactions */}
+        <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_at_top,rgba(248,113,113,0.18),rgba(10,10,10,0.9))]" />
       </div>
 
       {/* Content */}
       <div className="relative z-10 mx-auto flex max-w-6xl flex-col items-center px-6 pt-28 pb-16 text-center">
         <h1
-          className="text-4xl sm:text-5xl md:text-6xl font-extrabold tracking-tight text-cyan-300"
-          style={{ textShadow: '0 0 18px rgba(34,211,238,0.75), 0 0 36px rgba(34,211,238,0.35)' }}
+          className="text-4xl sm:text-5xl md:text-6xl font-extrabold tracking-tight text-red-300"
+          style={{ textShadow: '0 0 18px rgba(239,68,68,0.75), 0 0 36px rgba(239,68,68,0.35)' }}
         >
           Hamid Ali
         </h1>
-        <p className="mt-3 text-lg sm:text-xl text-cyan-100/80">
+        <p className="mt-3 text-lg sm:text-xl text-white/85">
           Software Engineer | Project Manager | Data Analyst
         </p>
-        <p className="mt-4 max-w-2xl text-cyan-100/70">
+        <p className="mt-4 max-w-2xl text-white/70">
           Blending technology, management, and data to build smarter solutions.
         </p>
 
@@ -76,11 +76,11 @@ export default function Hero() {
           }].map((item, idx) => (
             <div
               key={idx}
-              className="group relative overflow-hidden rounded-xl bg-[#0b1220]/70 px-4 py-5 backdrop-blur-md transition-transform duration-300 hover:-translate-y-0.5"
+              className="group relative overflow-hidden rounded-xl bg-[#141414]/70 px-4 py-5 backdrop-blur-md transition-transform duration-300 hover:-translate-y-0.5"
             >
-              <div className="absolute inset-0 rounded-xl ring-1 ring-cyan-400/30" />
-              <div className="absolute -inset-16 rounded-full bg-cyan-500/10 opacity-0 blur-3xl transition-opacity duration-300 group-hover:opacity-100" />
-              <p className="relative text-center text-sm font-medium text-cyan-100/90">
+              <div className="absolute inset-0 rounded-xl ring-1 ring-red-400/30" />
+              <div className="absolute -inset-16 rounded-full bg-red-500/10 opacity-0 blur-3xl transition-opacity duration-300 group-hover:opacity-100" />
+              <p className="relative text-center text-sm font-medium text-white/90">
                 {item.label}
               </p>
             </div>

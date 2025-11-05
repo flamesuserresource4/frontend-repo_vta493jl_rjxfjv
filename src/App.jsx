@@ -19,7 +19,7 @@ function App() {
   }, []);
 
   return (
-    <div className="min-h-screen w-full scroll-smooth bg-[#05070d] font-sans">
+    <div className="min-h-screen w-full scroll-smooth bg-[#0a0a0a] font-sans">
       <Hero />
       <Profile />
       <SkillsProjects />
